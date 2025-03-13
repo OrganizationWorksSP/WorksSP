@@ -19,7 +19,6 @@ Telefono char(15)NOT NULL,
 Direccion varchar(200)NOT NULL	
 );
 GO
---DROP TABLE Usuarios
 
 --crear tabla de Trabajador
 CREATE TABLE Trabajadores(
@@ -29,7 +28,6 @@ Estado TINYINT DEFAULT 1
 CONSTRAINT FK1_Usuario_Trabajador FOREIGN KEY (IdUsuario) REFERENCES Usuarios (Id)
 );
 GO
---DROP TABLE Trabajadores
 
 --crear tabla de Contratista
 CREATE TABLE Contratistas(
@@ -39,7 +37,6 @@ Estado TINYINT DEFAULT 1
 CONSTRAINT FK1_Usuario_Contratista FOREIGN KEY (IdUsuario) REFERENCES Usuarios (Id)
 );
 GO
---DROP TABLE Contratistas
 
 
 --crear tabla categorias
@@ -66,8 +63,6 @@ CONSTRAINT FK1_Categoria_PerfilTrabajo FOREIGN KEY (IdCategoria) REFERENCES Cate
 CONSTRAINT FK2_Trabajador_PerfilTrabajo FOREIGN KEY (IdTrabajador) REFERENCES Trabajadores (Id)
 );
 GO
---DROP TABLE PerfilTrabajos
-
 
 --crear tabla de publicar oferta de trabajo 
 CREATE TABLE OfertaTrabajos(
@@ -85,8 +80,6 @@ CONSTRAINT FK1_Categoria_OfertaTrabajo FOREIGN KEY (IdCategoria) REFERENCES Cate
 CONSTRAINT FK2_Constratista_OfertaTrabajo FOREIGN KEY (IdConstratista) REFERENCES Contratistas (Id)
 );
 GO
---DROP TABLE OfertaTrabajos
-
 
 --crear tabla de SolicitarTrabajadores
 CREATE TABLE SolicitarTrabajadores(
@@ -100,8 +93,6 @@ CONSTRAINT FK2_Contratista_SolicitarTrabajador FOREIGN KEY (IdContratista) REFER
 );
 GO
 
---DROP TABLE SolicitarTrabajadores
---DROP TABLE SolicitarOfertas
 
 --crear tabla de SolicitarOfertas
 CREATE TABLE SolicitarOfertas(
